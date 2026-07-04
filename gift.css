@@ -1,0 +1,176 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Baloo 2', cursive;
+
+}
+
+body {
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #ffd6e8, #ffeaf5);
+
+}
+
+.container {
+
+    text-align: center;
+
+}
+
+h1 {
+
+    font-size: 60px;
+
+    color: #ff4f87;
+
+}
+
+h2 {
+
+    margin-top: 10px;
+
+    color: #c2185b;
+
+}
+
+.envelope {
+
+    font-size: 150px;
+
+    cursor: pointer;
+
+    margin: 40px;
+
+    transition: .5s;
+
+    animation: float 2s infinite;
+
+}
+
+.envelope:hover {
+
+    transform: scale(1.15);
+
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+}
+
+.letter {
+
+    display: none;
+
+    margin: auto;
+
+    width: 600px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+
+}
+
+.letter h3 {
+
+    font-size: 40px;
+
+    color: #ff4f87;
+
+}
+
+#typing {
+
+    margin-top: 20px;
+
+    font-size: 24px;
+
+    line-height: 1.7;
+
+    color: #444;
+
+    min-height: 220px;
+
+    white-space: pre-wrap;
+
+}
+
+button {
+
+    margin-top: 20px;
+
+    padding: 15px 40px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: #ff4f87;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+.heart {
+
+    position: fixed;
+
+    font-size: 22px;
+
+    animation: fly 7s linear forwards;
+
+}
+
+@keyframes fly {
+
+    from {
+
+        transform: translateY(100vh);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform: translateY(-120vh);
+
+        opacity: 0;
+
+    }
+
+}

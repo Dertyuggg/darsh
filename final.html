@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final Surprise ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffd6e8, #ffeaf5, #fff7fb);
+
+        }
+
+        .container {
+
+            background: rgba(255, 255, 255, .75);
+
+            backdrop-filter: blur(15px);
+
+            padding: 50px;
+
+            border-radius: 30px;
+
+            text-align: center;
+
+            box-shadow: 0 15px 40px rgba(255, 105, 180, .25);
+
+            animation: pop .7s;
+
+        }
+
+        img {
+
+            width: 220px;
+
+            animation: float 3s infinite ease-in-out;
+
+        }
+
+        h1 {
+
+            margin-top: 20px;
+
+            font-size: 55px;
+
+            color: #ff4f87;
+
+        }
+
+        p {
+
+            margin-top: 20px;
+
+            font-size: 23px;
+
+            color: #666;
+
+        }
+
+        .loader {
+
+            margin: 40px auto;
+
+            width: 320px;
+
+            height: 18px;
+
+            background: #ffd2e5;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+        }
+
+        .bar {
+
+            height: 100%;
+
+            width: 0%;
+
+            background: linear-gradient(90deg, #ff4f87, #ff85b8);
+
+            animation: loading 5s linear forwards;
+
+        }
+
+        #status {
+
+            font-size: 22px;
+
+            color: #d63384;
+
+            margin-top: 20px;
+
+        }
+
+        .heart {
+
+            position: fixed;
+
+            font-size: 22px;
+
+            animation: rise 7s linear forwards;
+
+        }
+
+        @keyframes loading {
+
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+        }
+
+        @keyframes rise {
+
+            from {
+
+                transform: translateY(100vh);
+
+                opacity: 1;
+
+            }
+
+            to {
+
+                transform: translateY(-120vh);
+
+                opacity: 0;
+
+            }
+
+        }
+
+        @keyframes pop {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(.8);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="cat5.png">
+
+        <h1>❤️ wait bbg ❤️</h1>
+
+        <p>Preparing something special...</p>
+
+        <div class="loader">
+
+            <div class="bar"></div>
+
+        </div>
+
+        <div id="status">
+
+            Finding your surprise... 🎁
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const messages = [
+
+            "Finding your surprise... 🎁",
+
+            "Wrapping it carefully... 🎀",
+
+            "Adding extra cuteness... 🐱",
+
+            "Almost done... ❤️",
+
+            "Opening surprise... ✨"
+
+        ];
+
+        let i = 0;
+
+        setInterval(() => {
+
+            if (i < messages.length) {
+
+                document.getElementById("status").innerHTML = messages[i];
+
+                i++;
+
+            }
+
+        }, 1000);
+
+        setInterval(() => {
+
+            const heart = document.createElement("div");
+
+            heart.className = "heart";
+
+            heart.innerHTML = "💖";
+
+            heart.style.left = Math.random() * 100 + "vw";
+
+            heart.style.fontSize = (20 + Math.random() * 20) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 7000);
+
+        }, 250);
+
+        setTimeout(() => {
+
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+        }, 5000);
+
+    </script>
+
+</body>
+
+</html>

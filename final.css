@@ -1,0 +1,196 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+
+}
+
+body {
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: linear-gradient(#071426, #1d3557);
+
+    color: white;
+
+}
+
+.container {
+
+    text-align: center;
+
+    z-index: 5;
+
+}
+
+#cat {
+
+    width: 260px;
+
+    animation: float 3s infinite ease-in-out;
+
+    filter: drop-shadow(0 0 25px pink);
+
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+}
+
+.moon {
+
+    position: fixed;
+
+    top: 50px;
+
+    right: 80px;
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: #fff9c4;
+
+    box-shadow: 0 0 60px white;
+
+}
+
+#title {
+
+    font-size: 60px;
+
+    margin: 20px;
+
+    color: #ffd6f4;
+
+}
+
+#letter {
+
+    width: 700px;
+
+    max-width: 90%;
+
+    margin: auto;
+
+    font-size: 24px;
+
+    line-height: 1.8;
+
+    min-height: 220px;
+
+    white-space: pre-wrap;
+
+}
+
+button {
+
+    margin-top: 30px;
+
+    padding: 18px 45px;
+
+    font-size: 22px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    background: #ff4f87;
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+button:hover {
+
+    transform: scale(1.1);
+
+}
+
+.star {
+
+    position: fixed;
+
+    background: white;
+
+    border-radius: 50%;
+
+    animation: twinkle 2s infinite;
+
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+
+        opacity: .2;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+}
+
+.heart {
+
+    position: fixed;
+
+    font-size: 22px;
+
+    animation: rise 8s linear forwards;
+
+}
+
+@keyframes rise {
+
+    from {
+
+        transform: translateY(100vh);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform: translateY(-120vh);
+
+        opacity: 0;
+
+    }
+
+}
